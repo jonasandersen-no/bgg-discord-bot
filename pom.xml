@@ -56,7 +56,7 @@
     <dependency>
       <groupId>no.jonasandersen</groupId>
       <artifactId>rcon</artifactId>
-      <version>3.0-SNAPSHOT</version>
+      <version>3.0</version>
     </dependency>
 
     <dependency>
