@@ -67,7 +67,7 @@ jobs:
         run: |
           PROJECT_VERSION=${{ needs.build.outputs.projectVersion }}
           echo $PROJECT_VERSION
-          docker manifest create bjoggis/bgg-discord-bot:v$PROJECT_VERSION --amend bjoggis/bgg-discord-bot:v$PROJECT_VERSION-x86_64 --amend bjoggis/bgg-discord-bot:v$PROJECT_VERSION-aarch_64
-          docker manifest push bjoggis/bgg-discord-bot:v$PROJECT_VERSION
-          docker manifest create bjoggis/bgg-discord-bot:latest --amend bjoggis/bgg-discord-bot:v$PROJECT_VERSION-x86_64 --amend bjoggis/bgg-discord-bot:v$PROJECT_VERSION-aarch_64
+          docker manifest create bjoggis/bgg-discord-bot:$PROJECT_VERSION --amend bjoggis/bgg-discord-bot:$PROJECT_VERSION-x86_64 --amend bjoggis/bgg-discord-bot:$PROJECT_VERSION-aarch_64
+          docker manifest push bjoggis/bgg-discord-bot:$PROJECT_VERSION
+          docker manifest create bjoggis/bgg-discord-bot:latest --amend bjoggis/bgg-discord-bot:$PROJECT_VERSION-x86_64 --amend bjoggis/bgg-discord-bot:$PROJECT_VERSION-aarch_64
           docker manifest push bjoggis/bgg-discord-bot:latest
